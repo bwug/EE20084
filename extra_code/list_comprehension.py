@@ -32,3 +32,22 @@ for i in range(10):
 
 # Cool way
 even_squares = [i**2 if i % 2 == 0 else i**3 for i in range(10)]
+
+# Create a blank list of x 0s
+x = 10
+zeros = [0 for _ in range(x)]
+
+# make a list of lists of x 0s
+y = 5
+zeros = [[0 for _ in range(x)] for _ in range(y)]
+
+# or
+
+zeros = [[0]*x for _ in range(y)]
+
+# make a list of x single [0] cells
+
+zeros = [[0] for _ in range(x)]
+
+# Try printing everything seen here and see the results
+# Try changing values and conditions to see what changes
