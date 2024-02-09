@@ -54,8 +54,8 @@ except FileNotFoundError:
 file_lines = input_file.readlines()
 for index, line in enumerate(file_lines):
     print(f"Line {index}: {line}")
-    n1, n1_found = find_int(line, "Node1", True, "int")
-    n2, n2_found = find_int(line, "Node2", True, "int")
+    n1, n1_found = find_var(line, "Node1", True, "int")
+    n2, n2_found = find_var(line, "Node2", True, "int")
     happy = n1_found and n2_found
     if not happy:
         print(f"Error in line {index}")
