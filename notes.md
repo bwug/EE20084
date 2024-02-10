@@ -43,6 +43,7 @@ High-level means that there is a strong abstraction between the programming synt
 
 <display>
 <summary> Examples using C </summary>
+
 ```C
 int main ()
 {
@@ -52,6 +53,7 @@ int main ()
     return 0; // Notice that we are returning an int in an int function
 }
 ```
+
 <display>
 
 As seen in the code block above, we can assign data to variables using the assignment operator _=_
@@ -74,4 +76,13 @@ The four primary data types are:
 
 You can also change a data type, this is referred to as casting and is seen more in dynamic languages than static languages. For example, in python, `str(6)` will convert the integer 6 into the character `"6"`
 
-# Operators
+Operators, as previously mentioned, are used to manipulate or compare data, python has the following operator groups:
+- Arithmetic
+- Assignment
+- Comparison
+- Logical
+- Identity
+- Membership
+- Bitwise
+
+Examples for all of these can be seen in [the example code area](/extra_code/example_codes.py)
