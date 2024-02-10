@@ -1,6 +1,6 @@
 <h1> Week 1 </h1>
 
-<br>
+***
 
 > for(let i=1;i<=100;i++){s="";if(i%3==0){s+="fizz"}if(i%5==0){s+="buzz"}if(s==""){s=i}console.log(s)}
 
@@ -29,11 +29,11 @@ Python is an interpreted, high level language. Interpreted means that the source
 
 High-level means that there is a strong abstraction between the programming syntax or language used, and that of the underlying processor operation itself. It is usually more reader friendly at the cost of potential optimisations.
 
-<br>
+***
 
 <h2> Lecture 2 - Variables and Operators </h2>
 
-<br>
+***
 
 - Variables: In essence, is a name used to refer to some piece of data, these variables are assigned different **data types**
 
