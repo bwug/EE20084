@@ -86,3 +86,5 @@ Operators, as previously mentioned, are used to manipulate or compare data, pyth
 - Bitwise
 
 Examples for all of these can be seen in [the example code area](/extra_code/example_codes.py)
+
+<h2> Lecture 3 - Introduction to abstract data types </h2>
