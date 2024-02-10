@@ -1,7 +1,5 @@
 <h1> Week 1 </h1>
 
-***
-
 > for(let i=1;i<=100;i++){s="";if(i%3==0){s+="fizz"}if(i%5==0){s+="buzz"}if(s==""){s=i}console.log(s)}
 
 <h2> Course overview: </h2>
@@ -29,11 +27,7 @@ Python is an interpreted, high level language. Interpreted means that the source
 
 High-level means that there is a strong abstraction between the programming syntax or language used, and that of the underlying processor operation itself. It is usually more reader friendly at the cost of potential optimisations.
 
-***
-
 <h2> Lecture 2 - Variables and Operators </h2>
-
-***
 
 - Variables: In essence, is a name used to refer to some piece of data, these variables are assigned different **data types**
 
@@ -41,7 +35,7 @@ High-level means that there is a strong abstraction between the programming synt
 
 - Operators: Tools that manipulate variables and data
 
-<display>
+<details>
 <spoiler> Examples using C </spoiler>
 
 ```C
@@ -54,7 +48,7 @@ int main ()
 }
 ```
 
-<display>
+</details>
 
 As seen in the code block above, we can assign data to variables using the assignment operator _=_
 
