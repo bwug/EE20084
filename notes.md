@@ -88,3 +88,6 @@ Operators, as previously mentioned, are used to manipulate or compare data, pyth
 Examples for all of these can be seen in [the example code area](/extra_code/example_codes.py)
 
 <h2> Lecture 3 - Introduction to abstract data types </h2>
+<h2> Lecture 4 - Introduction to sequence, selection and iteration </h2>
+<h2> Lecture 5 - Introduction to python functions </h2>
+<h2> Lecture 6 - Introduction to python object-oriented programming </h2>
