@@ -36,7 +36,9 @@ High-level means that there is a strong abstraction between the programming synt
 - Operators: Tools that manipulate variables and data
 
 <details>
-<spoiler> Examples using C </spoiler>
+<summary>
+Examples using C
+</summary>
 
 ```C
 int main ()
