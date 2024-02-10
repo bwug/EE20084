@@ -42,7 +42,7 @@ High-level means that there is a strong abstraction between the programming synt
 - Operators: Tools that manipulate variables and data
 
 <display>
-<summary> Examples using C </summary>
+<spoiler> Examples using C </spoiler>
 
 ```C
 int main ()
