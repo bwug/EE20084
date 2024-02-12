@@ -131,6 +131,7 @@ print(data[0], data[2:1000])
 <br>
 
 <details><summary>List vs. Array</summary>The notes say lists are analogous to arrays in other languages, though most high level languages support both lists and arrays.
+Lists are technically arrays with dynamic memory management and are more like a kind of array, so the use of the word analogous is correct, albeit a tad misleading. Ignore this section if you do not care about dynamic memory management in abstract data types
 
 An [interesting stackoverflow page](stackoverflow.com/questions/3917574/how-is-pythons-list-implemented) goes over how python converts arrays into lists</details>
 
