@@ -101,7 +101,7 @@ Last lecture, single data points were introduced and how they can be typed, in t
     - A dictionary is a collection of key-value pairs, where the key is a unique value that points to the value
     <details><summary>Example code in python:</summary>
 
-    ```py
+    ```python
     dict = { "value1": "Hello",
     "value2": "world",
     "name": "Harry"
@@ -136,5 +136,59 @@ Lists are technically arrays with dynamic memory management and are more like a 
 An [interesting stackoverflow page](stackoverflow.com/questions/3917574/how-is-pythons-list-implemented) goes over how python converts arrays into lists</details>
 
 <h2> Lecture 4 - Introduction to sequence, selection and iteration </h2>
+
+> Known as "Program Control Flow", I use the compsci terms
+
+<details><summary> Sequence </summary>
+
+```py
+print("hello", end = " ")
+print("world")
+print("My age is", end = " ")
+print(3)
+print("I think?")
+```
+
+</details>
+<details><summary> Selection </summary>
+
+```py
+a, b = True, False
+if a and b: print(True) # Will not print
+if a or b: print(True) # Will not print
+```
+
+</details>
+<details><summary> Iteration </summary>
+
+```py
+for x in range(0, 10):
+    print(x)
+
+while 1:
+    print("Hello world")
+```
+
+</details>
+
+Python includes a number of keywords and structures that are used to control the flow of a program, it also uses white space instead of the common curly brackets { } to dictate depth in a program
+
+This indentation is used to help control the flow of a program, as each new layer of control needs a new layer of indentation
+
+### if, elif and else
+
+Almost all programming languages use if, else if (elif) and else statements. These will execute code conditionally, i.e if the input statement meets certain criteria
+
+For example: `if a > b: print("A is bigger than B!")` is valid code for a single operation, but we can expand this to:<br>`print("a > b!") if a > b else print("a <= b")` <- which is also referred to as a ternary statement, something seen in the C programming module
+
+### for and while
+
+While loops allow programs to repeat a section of code, this repitition will only work if the given condition is True, for example: `while a < b: a += 1` will continue looping until _a_ is greater than or equal to _b_
+
+### pass, break and continue
+
+
+### Error handling
+
 <h2> Lecture 5 - Introduction to python functions </h2>
 <h2> Lecture 6 - Introduction to python object-oriented programming </h2>

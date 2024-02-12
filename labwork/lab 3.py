@@ -8,18 +8,9 @@ Functions return a value, procedures do not
 Functions are defined using the def keyword
 Functions can take parameters
 Functions can have default parameters
-Functions can have variable number of parameters
-Functions can be called using named parameters
-Functions can return multiple values
-Functions can be nested
-Functions can be passed as parameters
-Functions can be assigned to variables
-Functions can be defined inside other functions
-Functions can be defined inside classes
-Functions can be defined inside other functions
-Copilot is helping me out here, thanks CoPilot :)
-
-Now that we know functions can do anything, lets learn to actually implement them
+etc.
+Let's learn how to implement functions
+More content is in ./extra_code.example_codes.py
 """
 
 # Starting with the transient response calculation
@@ -47,4 +38,10 @@ def frequency_response(resistance, capacitance, omega):
 xpoints = np.linspace(0, 100, 100) # 100 points between 0 and 100
 ypoints = [frequency_response(1000, 0.1, x*2*3.1415) for x in xpoints]
 # Cool list comprehension, more can be seen in list_comprehension.py
-# I cannot be bothered to plot this tonight :)
+
+# Plot the frequency response
+# This uses MATLAB commands as MATPLOTLIB is just a frontend for it
+plt.plot(xpoints, ypoints)
+plt.ylabel('Magnitude')
+plt.xlabel('Frequency')
+plt.show()
