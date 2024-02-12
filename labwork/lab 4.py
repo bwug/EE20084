@@ -1,6 +1,7 @@
 """
 Author: HH2046
 Created on Friday 9th Feb, 12:22 ish
+Todo: Add comments to explain the code better
 """
 
 import sys
@@ -10,7 +11,7 @@ def find_var(search_string, name, noisy, type):
     var_index = search_string.find(name)
     if noisy:
         print(f"Found {name} at index {var_index}")
-    if var_index >= -1: # This if statement determines whether PP has been found
+    if var_index >= -1: # This if statement determines whether name has been found
         var_length = len(name)
         start_point = var_index + var_length
         new_string = search_string[start_point:]
