@@ -69,7 +69,8 @@ Notice the "int" declaring the type of the input parameters
 Notice the semicolon at the end of the return statement
 Notice the curly braces encapsulating the function
 
-In Python:"""
+In Python:
+"""
 
 def add(a, b) -> int:
     # The "int" keyword here is optional
