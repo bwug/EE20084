@@ -38,7 +38,7 @@ _ = [[],[],[],[],[]]
 R = np.matmul(P, Q) # Multiplies the two matrices
 print(R)
 
-Z = np.rot(Q) # Rotates the matrix 90 degrees
+Z = np.rot90(Q) # Rotates the matrix 90 degrees
 # You can rotate either but you need to rotate one of them
 # This is because its 2x4 + 4x2, which is not possible in linear algebra
 
