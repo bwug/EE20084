@@ -135,9 +135,9 @@ Lists are technically arrays with dynamic memory management and are more like a 
 
 An [interesting stackoverflow page](stackoverflow.com/questions/3917574/how-is-pythons-list-implemented) goes over how python converts arrays into lists</details>
 
-<h2> Lecture 4 - Introduction to sequence, selection and iteration </h2>
+## Lecture 4 - Introduction to sequence, selection and iteration
 
-> Known as "Program Control Flow", I use the compsci terms
+> Known as "Program Control Flow", though the computer science terms have been used
 
 <details><summary> Sequence </summary>
 
@@ -187,8 +187,183 @@ While loops allow programs to repeat a section of code, this repitition will onl
 
 ### pass, break and continue
 
+```py
+if a >= b:
+    if a == b:
+        pass
+    elif a > b:
+        # Code
+        return 0
+
+for x in range(0, 10):
+    if x == 4:
+        break
+    print(x)
+
+# 0, 1, 2, 3
+
+for name in names:
+    if name == "harry": continue
+    print(name)
+    # Prints everything but harry
+```
 
 ### Error handling
 
-<h2> Lecture 5 - Introduction to python functions </h2>
-<h2> Lecture 6 - Introduction to python object-oriented programming </h2>
+```py
+try:
+    print(x)
+except:
+    print("Error!")
+# Assuming x doesn't exist, the "except" code will occur
+
+try:
+    x = "5"
+    print(x + 3)
+except TypeError, ValueError:
+    print("Type or Value error occured")
+```
+
+## Lecture 5 - Introduction to python functions
+
+In this section lambda functions _(anonymous functions)_ and standard functions and procedures
+
+A function or procedure are reusable blocks of code that can take inputs and outputs, though functions are different in that they return an output whereas procedures simply act on data without returning code
+
+Both will be referred to as _functions_ for the rest of this module
+
+Functions will allow users to develop modular code, this helps with:
+- Testing - Individual functions can be tested
+- Development - Reusable code blocks make development easier
+- Transferability - Code can be shared between developers for separate files more easily
+
+**Syntax:**
+```py
+def func(input1, input2) -> int:
+    return input1 + input2
+```
+
+The name of the function is func, the arguments - or _args_ - are the input variables given to the function. We then see the "-> int" keyword, which specfies the function returns an integer value
+
+Finally, we reach the "return" statement, which returns anything on that line of code, using abstract data types for returning multiple data values
+
+We can also structure functions using `def f(*args):` or `def f(**kwargs)` to input many arguments without using many argument names
+
+<details><summary>Example code</summary>
+
+```py
+def f(*args):
+    for arg in args: print(arg)
+
+def b(**kwargs):
+    for key, value in kwargs:
+        print(key, value)
+```
+</details>
+
+We can also use _default arguments_ or _optional arguments_ which will have a default value
+
+<details><summary>Example code</summary>
+
+```py
+def foo(a, b="hello"):
+    print(a)
+    print(b)
+
+foo("world", "hiya")
+# prints "hiya" instead of "hello"
+```
+</details>
+
+Nested functions are functions that contain functions
+
+<details><summary>Example code</summary>
+
+```py
+def head_function(foo, bar):
+    def find_sum(num_list, sum = 0) -> int:
+        for num in num_list: sum += num
+        return sum
+    
+    if foo = "find_sum": return find_sum(bar)
+    else: return 0
+
+def return_larger(num1, num2):
+    if num1 > num2: return num1
+    elif num1 < num2: return num2
+    else: return -1
+
+print(return_larger(5, 6))
+# Passing the function return_larger as an argument for print
+```
+</details>
+
+Recursive functions are functions that call themselves, they do this by implementing a portion of memory called the "stack"
+
+Anonymous functions, known as _lambda functions_ in python, are functions that cannot be called but instead run in the line of code that is being executed
+
+<details><summary>Example code</summary>
+
+```py
+def my_func(a):
+    return lambda x: x * a
+
+doubler = my_func(2)
+print(doubler(4)) # prints 8
+```
+</details>
+
+## Lecture 6 - Introduction to python object-oriented programming
+
+Object Oriented Programming, _OOP_ is a programming paradigm that separates code into objects, classes, methods and attributes
+
+It revolves around the concepts of _objects_
+
+_Objects_ can contain data in the form of properties, or attributes or functions in the form of methods, furthermore, a _class_ is a template for an _object_ and most languages support both classes and objects and an object is an instantiation of a class if classes do exist
+
+There are a few notable oddities, such as JSON - "JavaScript object notation", created to use with JavaScript but supported by most high level languages
+
+I will provide extra information in the [example code](/extra_code/object_code.js) area
+
+Classes in python are created using the _class_ keyword, and a general template can be seen below:
+
+```py
+class Person:
+    def __init__(self, name="", age=0):
+        self.name = name
+        self.age = age
+    
+    def get_name(self): return self.name
+
+    def get_age(self): return self.age
+
+person_a = Person("Harry", 19)
+
+print(person_a.get_age()) # prints 19
+
+del person_a.age()
+```
+
+Let's break this down
+
+`class Person` creates a new class template called "Person" (note the capital P)
+
+`def __init__` is a **private** function called initialise that has the parameter `self` which is a keyword that refers to everything about the class while inside the clas
+
+`self.name = name` sets the objects name to the name passed when calling the class instantiate function `Person(name, age)`
+
+`def get_name(self): return self.name` returns the name by using a "getter" function, which is used in high level languages to keep classes private, so data inside of them cannot be manipulated or changed by external sources, such as subroutines in the main code
+
+Classes can also inherit other classes, meaning they inherit new methods and attributes:
+
+```py
+class Person:
+    def __init__(self, name="", age=0):
+        self.name = name
+        self.age = age
+    
+class Student(Person):
+    def __init__(self, name="", age=0, grade):
+        super().__init__(name, age)
+        self.grade = grade
+```
