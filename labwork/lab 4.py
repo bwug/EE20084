@@ -4,6 +4,13 @@ Created on Friday 9th Feb, 12:22 ish
 Todo: Add comments to explain the code better
 """
 
+"""
+This code has not been tested and likely won't work
+
+Please use as reference only for the time being
+    this code will be updated in due time with results, testing and comments
+"""
+
 import sys
 import os
 
