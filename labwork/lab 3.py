@@ -1,11 +1,11 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
+import math
 from cmath import phase as phase
 
 """
-This code is currently under construction and DOES NOT work
-This code should be used as reference for now to how functions work
+This code works and is a good reference for now to how functions work
     and how complex maths is done in python
 """
 
@@ -39,18 +39,20 @@ print(transient_response(12, 1000, 0.1, 2))
 # Exercise B: Write a function to calculate the frequency response
 def frequency_response(resistance, capacitance, omega):
     z_component = 1j * omega * capacitance
-    magnitude = 1 / (1 + (resistance * z_component)**2)**0.5
-    return abs(magnitude)
+    magnitude = 1 / (1 + (resistance * z_component))
+    return magnitude
 
 # Exercise C: Further Challenge
 
-xpoints = np.linspace(0, 100, 100) # 100 points between 0 and 100
-ypoints = [phase(frequency_response(1000, 0.1, x*2*3.1415)) for x in xpoints]
+xpoints = np.logspace(-2, 2, 100) # 100 points between 0 and 100
+print(xpoints)
+ypoints = [20*math.log10(abs(frequency_response(1, 1, x*2*3.1415))) for x in xpoints]
 # Cool list comprehension, more can be seen in list_comprehension.py
 
 # Plot the frequency response
 # This uses MATLAB commands as MATPLOTLIB is just a frontend for it
 plt.plot(xpoints, ypoints)
+plt.xscale("log")
 plt.ylabel('Magnitude')
 plt.xlabel('Frequency')
 plt.show()
