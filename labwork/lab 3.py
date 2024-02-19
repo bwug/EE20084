@@ -1,5 +1,14 @@
 import matplotlib.pyplot as plt
 import numpy as np
+
+from cmath import phase as phase
+
+"""
+This code is currently under construction and DOES NOT work
+This code should be used as reference for now to how functions work
+    and how complex maths is done in python
+"""
+
 """
 Introduction to function
 A function is a callable, reusable block of code
@@ -31,12 +40,12 @@ print(transient_response(12, 1000, 0.1, 2))
 def frequency_response(resistance, capacitance, omega):
     z_component = 1j * omega * capacitance
     magnitude = 1 / (1 + (resistance * z_component)**2)**0.5
-    return magnitude
+    return abs(magnitude)
 
 # Exercise C: Further Challenge
 
 xpoints = np.linspace(0, 100, 100) # 100 points between 0 and 100
-ypoints = [frequency_response(1000, 0.1, x*2*3.1415) for x in xpoints]
+ypoints = [phase(frequency_response(1000, 0.1, x*2*3.1415)) for x in xpoints]
 # Cool list comprehension, more can be seen in list_comprehension.py
 
 # Plot the frequency response

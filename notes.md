@@ -277,7 +277,7 @@ foo("world", "hiya")
 
 Nested functions are functions that contain functions
 
-<details><summary>Example code</summary>
+<details><summary>Nested code example</summary>
 
 ```py
 def head_function(foo, bar):
@@ -300,9 +300,21 @@ print(return_larger(5, 6))
 
 Recursive functions are functions that call themselves, they do this by implementing a portion of memory called the "stack"
 
+<details><summary>Simple recursive function</summary>
+
+```py
+def count_down(n):
+    print(n)
+    if n >= 0:
+        n -= 1
+        count_down(n)
+    if n < 0: return
+```
+</details>
+
 Anonymous functions, known as _lambda functions_ in python, are functions that cannot be called but instead run in the line of code that is being executed
 
-<details><summary>Example code</summary>
+<details><summary>Simple anonymous function</summary>
 
 ```py
 def my_func(a):
@@ -366,4 +378,59 @@ class Student(Person):
     def __init__(self, name="", age=0, grade):
         super().__init__(name, age)
         self.grade = grade
+```
+
+#### Important note
+
+A fascinating piece of code was shown earlier and quickly brushed over, **get**
+
+The getter function, and similarly, the setter function are both methods inside a class which are used to access data inside a class.
+
+##### Note this is for computer science only
+
+A class can have two kinds of attributes, private and public, a public piece of information can be accessed and changed by anything inside of the code
+
+```py
+class Person:
+    def __init__(self):
+        __name = "harry"
+        # Attribute cannot be changed
+        age = 7
+        # Code can be changed
+```
+
+```C++
+class Rectangle {
+        int width, height;
+    public:
+        void set_values(int,int);
+        int area(void);
+} rectangle;
+```
+
+In C++, the private (implied) and public keywords are used to instantiate attributes in classes whereas in python we use a number of underscores however they don't enforce privacy rules and are instead implications to the developer, whereas C++ private keyword enforces privacy
+
+In python, classes have inbuilt `__get__` and `__set__` methods
+
+```py
+class Rectangle:
+    def __init__(self, width=1, height=1):
+        self.width = width
+        self.height = height
+   
+rect = Rectangle(10, 11)
+rect.width = 20 # => Changes width to 20
+print(rect.height) # => Prints rectangle height
+```
+
+The `.width = 20` and `rect.height` here are setters and getters, respectively
+
+We can however write our own get and set methods inside the class, using this code:
+
+```py
+def set_value(self, value):
+    self.value = value
+
+def get_value(self, value):
+    return self.value
 ```
