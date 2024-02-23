@@ -51,3 +51,13 @@ zeros = [[0] for _ in range(x)]
 
 # Try printing everything seen here and see the results
 # Try changing values and conditions to see what changes
+
+# Cursed code
+
+import sys
+
+print(list(range(0, int(sys.argv[1]), 2)))
+# Prints a list of even numbers using sys.argv as the size of the list
+# To run in the terminal you would do
+# python3 filename.py [size]
+# where size is an int > 0
