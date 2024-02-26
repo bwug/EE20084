@@ -1,4 +1,4 @@
-<h1> Week 1 </h1>
+<h1> Weeks 1, 2, 3 - Dr. Cater </h1>
 
 > for(let i=1;i<=100;i++){s="";if(i%3==0){s+="fizz"}if(i%5==0){s+="buzz"}if(s==""){s=i}console.log(s)}
 
@@ -434,3 +434,72 @@ def set_value(self, value):
 def get_value(self, value):
     return self.value
 ```
+
+# Weeks 4, 5 - Dr. Pennock
+
+## Lecture 7 - Program Structure
+
+Structured programming should produce better software in a shorter development cycle than unstructured programming.
+
+- Program structure is all about organisation:
+    - Keep relation functions together in a file / unit
+    - Put reusable code sections in a library
+    - Arrange your program flow in a logical matter
+
+- Program structure is done upgront, not as a last ditch reorganisation to try and get things working
+
+The typical software execution cycle is to read data, process the data and store the result. When creating software it is good practice to break these execution down into sub-tasks, or **subprocedures**
+
+These subprocedures are created using a start and end block of code, usually `def func()` and `return data` in python and read / write some data, operate on some data etc.
+
+This subprocedures allow for reusable and easily testable code that makes version control significantly easier as subprocedures should be documenting and tested efficiently and correctly using docstrings and doctests
+
+If a subprocedure does not work it is best practice to test, understand what went wrong and update the code and version number
+
+Examples of poor software practice:
+- Open a file and start writing
+- Get it written and add comments later
+- Start with variable a
+- Make all your variables global
+- Assume all file and keyboard inputs are perfect
+- Assume that a program that compiles is finished
+- Assume that a program that works once is finished
+- Write code in as small a space as possible
+- Sort out indentation once the code works
+- Write code and then write/record tests once it all works
+- Write lots of code and add some tests as a last job
+
+Software implementation - a detailed process:
+- Requirements analysis and specification
+    - What functions is the software to do
+    - Are there time constraints
+    - Is there a design process to follow, ISO and IEEE
+
+- Design - top down and bottom up
+    - Consider alternative ways to satisfy the requirements
+    - Rank the alternatives to find the best solution
+    - Think through how to test the design
+
+- Decompose the design
+    - Factorise the problem into well defined, small and potentially simple steps, such as functions or procedures.
+    - Test and debug the steps to ensure they work and function with other smaller steps
+    - Rebuild the steps to create the full sized program
+
+- Implementation
+    - Coding to implement the functions and the overall program. Amend comments and documentation throughout development to keep everything updated and to improve software quality throughout development
+    - Module testing and recording test results when code blocks are combined into larger software suites
+    - Application testing and recording test results to show codebase works
+
+Additionally, planning helps ensure that code is created correctly and thoroughly
+- Interaction
+- Algorithm
+- Data structures
+- Functions
+- Testing
+
+All of these are important steps to consider and plan through to ensure the code is developed well
+
+Testing should identify that the function is performing the desired actions / operations
+
+When designing functions we need to make a statement about what is the proper action / operation of a function then testing can be done against this.
+
