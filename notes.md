@@ -503,3 +503,35 @@ Testing should identify that the function is performing the desired actions / op
 
 When designing functions we need to make a statement about what is the proper action / operation of a function then testing can be done against this.
 
+## Lecture 8 - Basic Input / Output and string methods
+
+The input and output of information is frequently done using strings
+
+This is the natural way to deal with text descriptions. With data values when they are rendered intro strings the values become easy to read on a computer screen, or "human readable"
+
+See a basic example below
+
+```py
+name: str = input("Please enter your name") # Input
+print("Hello " + name) # Output
+```
+
+We can also input and output using files, for example:
+
+```py
+filename = "data.txt"
+filecontents = open(filename, "r")
+contents = filecontents.read()
+filecontents.close()
+```
+
+The open() has several parameters that can be expressed
+
+|Mode|Description|
+|---|---|
+|r|Reading mode|
+|w|Writing mode, will overwrite file contents|
+|a|Append mode, will append to the end of a file|
+
+Additionally, file open methods MUST be accompanied by a file close method: `file = open(name, type)` and `file.close()`
+
