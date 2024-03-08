@@ -535,3 +535,27 @@ The open() has several parameters that can be expressed
 
 Additionally, file open methods MUST be accompanied by a file close method: `file = open(name, type)` and `file.close()`
 
+## Lecture 9 - Classes Cont.
+
+Arrays are a useful way of collceting a set of data where the elements are associated with each other and they are **all** of the same type
+
+For collecting data of differing data types a class is used. This helps the programmer organise complicated sets of data together rather than having the data known by separate variables or identities.
+
+**Overloading Methods**
+
+A method can be overloaded, that is to change the inbuilt methods inside of a class, for example:
+
+```py
+class Vector:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+    
+    def __add__(self, other):
+        rtn = Vector(0, 0)
+        rtn.x += self.x + other.x
+        rtn.y += self.y + other.y
+        return rtn
+```
+
+As seen above, the `__add__` method for integers has been rewritten so two vector classes can be added using `a + b` and it will add the two vector components
