@@ -559,3 +559,9 @@ class Vector:
 ```
 
 As seen above, the `__add__` method for integers has been rewritten so two vector classes can be added using `a + b` and it will add the two vector components
+
+# Week 6 - Cater
+
+## Lecture 10 - Testing code
+
+I didnt pay much attention imma keep it a buck 50
